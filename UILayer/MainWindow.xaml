@@ -1,0 +1,15 @@
+﻿<Window x:Class="UILayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Currency Exchange" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="CurrencyDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Base Currency" Binding="{Binding BaseCurrency.Abbreviation}" Width="*"/>
+                <DataGridTextColumn Header="Quote Currency" Binding="{Binding QuoteCurrency.Abbreviation}" Width="*"/>
+                <DataGridTextColumn Header="Min Value" Binding="{Binding MinValue}" Width="*"/>
+                <DataGridTextColumn Header="Max Value" Binding="{Binding MaxValue}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
